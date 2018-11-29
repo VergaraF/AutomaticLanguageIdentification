@@ -97,8 +97,8 @@ def train_unigram_model(model, language):
 
 
 # First Attempt to Train an english model and predict if it's english.
-training_corpora_en = uni_parse("en-the-little-prince.txt")
-training_corpora_fr = uni_parse("fr-le-petit-prince.txt")
+training_corpora_en = uni_parse("en-moby-dick.txt")
+training_corpora_fr = uni_parse("fr-vingt-mille-lieues-sous-les-mers.txt")
 # training_corpora_es = uni_parse("el-principito.txt")
 
 # Language Models
@@ -107,4 +107,18 @@ french_model = train_unigram_model(training_corpora_fr, 'FR')
 # spanish_model = train_unigram_model(training_corpora_es, 'ES')
 
 language = unigram_sentence("What will the Japanese economy be like next year?")
+print(language)
+language = unigram_sentence("She asked him if he was a student at this school. ")
+print(language)
+language = unigram_sentence("I'm OK.")
+print(language)
+language = unigram_sentence("I hate AI")
+print(language)
+language = unigram_sentence("Woody Allen parle.")
+print(language)
+language = unigram_sentence("Est-ce que l’arbitre est la?")
+print(language)
+language = unigram_sentence("Cette phrase est en anglais.")
+print(language)
+language = unigram_sentence("J’aime l’IA.")
 print(language)
