@@ -45,31 +45,37 @@ def unigram_sentence(sentence):
     # Read the language models from a file
     fr_language_model = read_model("FR-model")
     en_language_model = read_model("EN-model")
+    es_language_model = read_model("ES-model")
 
     probability_so_far_en = 0;
     probability_so_far_fr = 0;
-    # probability_so_far_es = 0;
-    print(sentence)
+    probability_so_far_es = 0;
+
+    output = ''
+
+    output += sentence + "\n"
     for ch in sentence:
         if ch != '\n' and ch != ' ' and ch != '"' and ch != ',' and ch != '!' and ch != '-' and ch != ':' and ch != ';' and ch != '.' and ch != '?' and ch != '’' and ch != '\'':
             probability_so_far_en += (math.log(en_language_model[ch.lower()], 10))
             probability_so_far_fr += (math.log(fr_language_model[ch.lower()], 10))
-            # probability_so_far_es += (math.log(es_language_model[ch.lower()] + smoothing, 10))
+            probability_so_far_es += (math.log(es_language_model[ch.lower()], 10))
 
-            print("Unigram: " + ch.lower())
-            print("FRENCH:  " + 'P(' + ch.lower() + ') = ' + str(fr_language_model[ch.lower()]) + ' ==> log prob of sentence so far: ' + str(math.exp(probability_so_far_fr)))
-            print("ENGLISH: " + 'P(' + ch.lower() + ') = ' + str(en_language_model[ch.lower()]) + ' ==> log prob of sentence so far: ' + str(math.exp(probability_so_far_en)))
-            # print("SPANISH: " + 'P(' + ch.lower() + ') = ' + es_language_model[ch] + ' ==> log prob of sentence so far: ' + probability_so_far_FR)
+            # Unigram Model
+            output += "Unigram: " + ch.lower() + "\n"
+            output += "FRENCH:  " + 'P(' + ch.lower() + ') = ' + str(fr_language_model[ch.lower()]) + ' ==> log prob of sentence so far: ' + str(math.exp(probability_so_far_fr)) + "\n"
+            output += "ENGLISH: " + 'P(' + ch.lower() + ') = ' + str(en_language_model[ch.lower()]) + ' ==> log prob of sentence so far: ' + str(math.exp(probability_so_far_en)) + "\n"
+            output += "SPANISH: " + 'P(' + ch.lower() + ') = ' + str(es_language_model[ch.lower()]) + ' ==> log prob of sentence so far: ' + str(math.exp(probability_so_far_es)) + "\n"
 
     #TODO: Return language accordning to probabilities
-    if probability_so_far_en > probability_so_far_fr:
-        print("\nAccording to the unigram model, the sentence is in English")
-    elif probability_so_far_en < probability_so_far_fr:
-        print("\nAccording to the unigram model, the sentence is in French")
+    if probability_so_far_en > probability_so_far_fr and probability_so_far_en > probability_so_far_es:
+        output += "\nAccording to the unigram model, the sentence is in English"
+    elif probability_so_far_fr > probability_so_far_en and probability_so_far_fr > probability_so_far_es:
+        output += "\nAccording to the unigram model, the sentence is in French"
+    elif probability_so_far_es > probability_so_far_en and probability_so_far_es > probability_so_far_fr:
+        output += "\nAccording to the unigram model, the sentence is in Spanish"
     else:
-        print("\nAccording to the unigram model, the sentence is in Spanish")
-
-    return probability_so_far_en
+        output += "\nCan't tell"
+    return output
 
 
 # Function that will output the lamguage model and their probabilities for a unigram and a language
@@ -86,9 +92,10 @@ def train_unigram_model(model, language):
             save_model(fr_language_model, language + '-model')
         elif language == 'ES':
             es_language_model.update({character.lower(): probability(model, character)})
+            save_model(es_language_model, language + '-model')
         else:
             language_model_output += "ERROR"
-        language_model_output +=  ("P(" + character + ") = " + str(probability(model, character))) + '\n'
+        language_model_output += ("P(" + character + ") = " + str(probability(model, character))) + '\n'
 
     f = open("unigram" +language+ ".txt", "w")
     f.write(language_model_output)
@@ -97,9 +104,12 @@ def train_unigram_model(model, language):
 # Main Function to run the models given an input of sentences
 def run_models(filename):
     sentences = [line.rstrip('\n') for line in open(filename)]
+    filenum = 0;
     for sentence in sentences:
-        unigram_sentence(sentence)
-
+        filenum += 1
+        output = unigram_sentence(sentence)
+        f = open("output/out" + str(filenum) + ".txt", "a")
+        f.write(output)
 
 # Saves models to a file for easier accessing
 def save_model(model, name):
@@ -114,12 +124,12 @@ def read_model(filename):
 # First Attempt to Train an english model and predict if it's english.
 # training_corpus_en = uni_parse("english-corpus.txt")
 # training_corpus_fr = uni_parse("french-corpus.txt")
-# training_corpora_es = uni_parse("el-principito.txt")
+# training_corpus_es = uni_parse("spanish-corpus.txt")
 
 # Training Language Models
 # train_unigram_model(training_corpus_en, 'EN')
 # train_unigram_model(training_corpus_fr, 'FR')
-# spanish_model = train_unigram_model(training_corpora_es, 'ES')
+# train_unigram_model(training_corpus_es, 'ES')
 
 
 # Running the models on the input sentences

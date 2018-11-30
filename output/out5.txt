@@ -1,0 +1,61 @@
+I hate AI.
+Unigram: i
+FRENCH:  P(i) = 0.07195420574256248 ==> log prob of sentence so far: 0.3188789177743763
+ENGLISH: P(i) = 0.06841707334551206 ==> log prob of sentence so far: 0.3119739752147772
+SPANISH: P(i) = 0.06350610791663634 ==> log prob of sentence so far: 0.30204341823667
+Unigram: h
+FRENCH:  P(h) = 0.0077025215466544235 ==> log prob of sentence so far: 0.03853027841307729
+ENGLISH: P(h) = 0.06567737861687997 ==> log prob of sentence so far: 0.09561556130868179
+SPANISH: P(h) = 0.008653134628915253 ==> log prob of sentence so far: 0.03838797412555415
+Unigram: a
+FRENCH:  P(a) = 0.08239664549553763 ==> log prob of sentence so far: 0.013031296869545501
+ENGLISH: P(a) = 0.0814519135801828 ==> log prob of sentence so far: 0.03217651613236194
+SPANISH: P(a) = 0.13557588495038456 ==> log prob of sentence so far: 0.016117839219473525
+Unigram: t
+FRENCH:  P(t) = 0.06703411470954175 ==> log prob of sentence so far: 0.004029530201735876
+ENGLISH: P(t) = 0.09193192097465834 ==> log prob of sentence so far: 0.011412431102450724
+SPANISH: P(t) = 0.03804937889705704 ==> log prob of sentence so far: 0.0038972620048739913
+Unigram: e
+FRENCH:  P(e) = 0.1679951762701969 ==> log prob of sentence so far: 0.0018569708886528125
+ENGLISH: P(e) = 0.12235416422174702 ==> log prob of sentence so far: 0.004582854071078538
+SPANISH: P(e) = 0.1262381117014824 ==> log prob of sentence so far: 0.001586395951457096
+Unigram: a
+FRENCH:  P(a) = 0.08239664549553763 ==> log prob of sentence so far: 0.0006280447462306787
+ENGLISH: P(a) = 0.0814519135801828 ==> log prob of sentence so far: 0.0015422204914351105
+SPANISH: P(a) = 0.13557588495038456 ==> log prob of sentence so far: 0.0006660751307266359
+Unigram: i
+FRENCH:  P(i) = 0.07195420574256248 ==> log prob of sentence so far: 0.00020027022899192178
+ENGLISH: P(i) = 0.06841707334551206 ==> log prob of sentence so far: 0.0004811326573706986
+SPANISH: P(i) = 0.06350610791663634 ==> log prob of sentence so far: 0.00020118360928710982
+
+According to the unigram model, the sentence is in EnglishI hate AI.
+Unigram: i
+FRENCH:  P(i) = 0.07195420574256248 ==> log prob of sentence so far: 0.3188789177743763
+ENGLISH: P(i) = 0.06841707334551206 ==> log prob of sentence so far: 0.3119739752147772
+SPANISH: P(i) = 0.06350610791663634 ==> log prob of sentence so far: 0.30204341823667
+Unigram: h
+FRENCH:  P(h) = 0.0077025215466544235 ==> log prob of sentence so far: 0.03853027841307729
+ENGLISH: P(h) = 0.06567737861687997 ==> log prob of sentence so far: 0.09561556130868179
+SPANISH: P(h) = 0.008653134628915253 ==> log prob of sentence so far: 0.03838797412555415
+Unigram: a
+FRENCH:  P(a) = 0.08239664549553763 ==> log prob of sentence so far: 0.013031296869545501
+ENGLISH: P(a) = 0.0814519135801828 ==> log prob of sentence so far: 0.03217651613236194
+SPANISH: P(a) = 0.13557588495038456 ==> log prob of sentence so far: 0.016117839219473525
+Unigram: t
+FRENCH:  P(t) = 0.06703411470954175 ==> log prob of sentence so far: 0.004029530201735876
+ENGLISH: P(t) = 0.09193192097465834 ==> log prob of sentence so far: 0.011412431102450724
+SPANISH: P(t) = 0.03804937889705704 ==> log prob of sentence so far: 0.0038972620048739913
+Unigram: e
+FRENCH:  P(e) = 0.1679951762701969 ==> log prob of sentence so far: 0.0018569708886528125
+ENGLISH: P(e) = 0.12235416422174702 ==> log prob of sentence so far: 0.004582854071078538
+SPANISH: P(e) = 0.1262381117014824 ==> log prob of sentence so far: 0.001586395951457096
+Unigram: a
+FRENCH:  P(a) = 0.08239664549553763 ==> log prob of sentence so far: 0.0006280447462306787
+ENGLISH: P(a) = 0.0814519135801828 ==> log prob of sentence so far: 0.0015422204914351105
+SPANISH: P(a) = 0.13557588495038456 ==> log prob of sentence so far: 0.0006660751307266359
+Unigram: i
+FRENCH:  P(i) = 0.07195420574256248 ==> log prob of sentence so far: 0.00020027022899192178
+ENGLISH: P(i) = 0.06841707334551206 ==> log prob of sentence so far: 0.0004811326573706986
+SPANISH: P(i) = 0.06350610791663634 ==> log prob of sentence so far: 0.00020118360928710982
+
+According to the unigram model, the sentence is in English
