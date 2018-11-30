@@ -1,4 +1,6 @@
 import math
+import pickle
+
 smoothing = 0.5
 alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 en_language_model = {}
@@ -39,6 +41,11 @@ def uni_parse(fname):
 
 # Function that takes a language model and a sentence and figures out the sum of probabilities of the sentence
 def unigram_sentence(sentence):
+
+    # Read the language models from a file
+    fr_language_model = read_model("FR-model")
+    en_language_model = read_model("EN-model")
+
     probability_so_far_en = 0;
     probability_so_far_fr = 0;
     # probability_so_far_es = 0;
@@ -56,11 +63,11 @@ def unigram_sentence(sentence):
 
     #TODO: Return language accordning to probabilities
     if probability_so_far_en > probability_so_far_fr:
-        return "\nAccording to the unigram model, the sentence is in English "
+        print("\nAccording to the unigram model, the sentence is in English")
     elif probability_so_far_en < probability_so_far_fr:
-        return "\nAccording to the unigram model, the sentence is in French "
+        print("\nAccording to the unigram model, the sentence is in French")
     else:
-        return "\nAccording to the unigram model, the sentence is in Spanish "
+        print("\nAccording to the unigram model, the sentence is in Spanish")
 
     return probability_so_far_en
 
@@ -73,8 +80,10 @@ def train_unigram_model(model, language):
     for character in alphabet:
         if language == 'EN':
             en_language_model.update({character.lower(): probability(model, character)})
+            save_model(en_language_model, language + '-model')
         elif language == 'FR':
             fr_language_model.update({character.lower(): probability(model, character)})
+            save_model(fr_language_model, language + '-model')
         elif language == 'ES':
             es_language_model.update({character.lower(): probability(model, character)})
         else:
@@ -84,41 +93,34 @@ def train_unigram_model(model, language):
     f = open("unigram" +language+ ".txt", "w")
     f.write(language_model_output)
 
-    # TODO: need to be written to a file for every language
-    if language == 'EN':
-        #print(en_language_model)
-        return en_language_model
-    elif language == 'FR':
-        print(fr_language_model)
-        return fr_language_model
-    elif language == 'ES':
-        #print(es_language_model)
-        return es_language_model
+
+# Main Function to run the models given an input of sentences
+def run_models(filename):
+    sentences = [line.rstrip('\n') for line in open(filename)]
+    for sentence in sentences:
+        unigram_sentence(sentence)
+
+
+# Saves models to a file for easier accessing
+def save_model(model, name):
+    pickle.dump(model, open('models/' + name + ".p", "wb"))
+
+
+# Read language models from a file (loads a list of probabilities
+def read_model(filename):
+    return pickle.load(open('models/' + filename + ".p", "rb"))
 
 
 # First Attempt to Train an english model and predict if it's english.
-training_corpora_en = uni_parse("en-moby-dick.txt")
-training_corpora_fr = uni_parse("fr-vingt-mille-lieues-sous-les-mers.txt")
+# training_corpus_en = uni_parse("english-corpus.txt")
+# training_corpus_fr = uni_parse("french-corpus.txt")
 # training_corpora_es = uni_parse("el-principito.txt")
 
-# Language Models
-english_model = train_unigram_model(training_corpora_en, 'EN')
-french_model = train_unigram_model(training_corpora_fr, 'FR')
+# Training Language Models
+# train_unigram_model(training_corpus_en, 'EN')
+# train_unigram_model(training_corpus_fr, 'FR')
 # spanish_model = train_unigram_model(training_corpora_es, 'ES')
 
-language = unigram_sentence("What will the Japanese economy be like next year?")
-print(language)
-language = unigram_sentence("She asked him if he was a student at this school. ")
-print(language)
-language = unigram_sentence("I'm OK.")
-print(language)
-language = unigram_sentence("I hate AI")
-print(language)
-language = unigram_sentence("Woody Allen parle.")
-print(language)
-language = unigram_sentence("Est-ce que l’arbitre est la?")
-print(language)
-language = unigram_sentence("Cette phrase est en anglais.")
-print(language)
-language = unigram_sentence("J’aime l’IA.")
-print(language)
+
+# Running the models on the input sentences
+run_models("sentences.txt")
