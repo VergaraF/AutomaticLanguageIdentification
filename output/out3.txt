@@ -16,22 +16,12 @@ FRENCH:  P(k) = 0.0002855409974520957 ==> log prob of sentence so far: 0.0005586
 ENGLISH: P(k) = 0.008413812298716041 ==> log prob of sentence so far: 0.0024952733764658395
 SPANISH: P(k) = 3.563456826066914e-05 ==> log prob of sentence so far: 0.0002601915735439691
 
-According to the unigram model, the sentence is in EnglishI'm OK.
-Unigram: i
-FRENCH:  P(i) = 0.07195420574256248 ==> log prob of sentence so far: 0.3188789177743763
-ENGLISH: P(i) = 0.06841707334551206 ==> log prob of sentence so far: 0.3119739752147772
-SPANISH: P(i) = 0.06350610791663634 ==> log prob of sentence so far: 0.30204341823667
-Unigram: m
-FRENCH:  P(m) = 0.03015185396172192 ==> log prob of sentence so far: 0.06969478425366107
-ENGLISH: P(m) = 0.02435451525162507 ==> log prob of sentence so far: 0.06214679584404156
-SPANISH: P(m) = 0.026038254846301283 ==> log prob of sentence so far: 0.06194102045639193
-Unigram: o
-FRENCH:  P(o) = 0.05222991222625617 ==> log prob of sentence so far: 0.019337472225447384
-ENGLISH: P(o) = 0.07242795319463152 ==> log prob of sentence so far: 0.01987386344378308
-SPANISH: P(o) = 0.09453850959555524 ==> log prob of sentence so far: 0.022237752345488963
-Unigram: k
-FRENCH:  P(k) = 0.0002855409974520957 ==> log prob of sentence so far: 0.0005586194828145801
-ENGLISH: P(k) = 0.008413812298716041 ==> log prob of sentence so far: 0.0024952733764658395
-SPANISH: P(k) = 3.563456826066914e-05 ==> log prob of sentence so far: 0.0002601915735439691
-
 According to the unigram model, the sentence is in English
+
+I'm OK.
+Bigram: o|K
+FRENCH:  P(o|K) = 5.03062303203444e-05 ==> log prob of sentence so far: 0.01359058201318209
+ENGLISH: P(o|K) = 0.0002933903566484332 ==> log prob of sentence so far: 0.029230161786092505
+SPANISH: P(o|K) = 2.274546910255477e-06 ==> log prob of sentence so far: 0.003541853498008454
+
+According to the bigram model, the sentence is in English

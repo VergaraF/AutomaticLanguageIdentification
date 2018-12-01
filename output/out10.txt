@@ -32,38 +32,24 @@ FRENCH:  P(a) = 0.08239664549553763 ==> log prob of sentence so far: 3.561574888
 ENGLISH: P(a) = 0.0814519135801828 ==> log prob of sentence so far: 1.1996537990127455e-05
 SPANISH: P(a) = 0.13557588495038456 ==> log prob of sentence so far: 3.8121474414183315e-05
 
-According to the unigram model, the sentence is in SpanishJ’aime l’IA.
-Unigram: j
-FRENCH:  P(j) = 0.006062963561284325 ==> log prob of sentence so far: 0.1089011115647841
-ENGLISH: P(j) = 0.001129423054354588 ==> log prob of sentence so far: 0.05248943585352274
-SPANISH: P(j) = 0.0045938265764126456 ==> log prob of sentence so far: 0.09653733984551661
-Unigram: a
-FRENCH:  P(a) = 0.08239664549553763 ==> log prob of sentence so far: 0.03683136412901034
-ENGLISH: P(a) = 0.0814519135801828 ==> log prob of sentence so far: 0.017663727079601402
-SPANISH: P(a) = 0.13557588495038456 ==> log prob of sentence so far: 0.04053283242342111
-Unigram: i
-FRENCH:  P(i) = 0.07195420574256248 ==> log prob of sentence so far: 0.011744745533612802
-ENGLISH: P(i) = 0.06841707334551206 ==> log prob of sentence so far: 0.005510623154132157
-SPANISH: P(i) = 0.06350610791663634 ==> log prob of sentence so far: 0.012242675255984239
-Unigram: m
-FRENCH:  P(m) = 0.03015185396172192 ==> log prob of sentence so far: 0.0025669539767394075
-ENGLISH: P(m) = 0.02435451525162507 ==> log prob of sentence so far: 0.0010977440406608567
-SPANISH: P(m) = 0.026038254846301283 ==> log prob of sentence so far: 0.0025106450022946316
-Unigram: e
-FRENCH:  P(e) = 0.1679951762701969 ==> log prob of sentence so far: 0.0011829564660573043
-ENGLISH: P(e) = 0.12235416422174702 ==> log prob of sentence so far: 0.000440817622519052
-SPANISH: P(e) = 0.1262381117014824 ==> log prob of sentence so far: 0.0010219680027170697
-Unigram: l
-FRENCH:  P(l) = 0.05297246052732266 ==> log prob of sentence so far: 0.00033024084107648145
-ENGLISH: P(l) = 0.044660243581501766 ==> log prob of sentence so far: 0.00011426865776966936
-SPANISH: P(l) = 0.05974400732707378 ==> log prob of sentence so far: 0.0003005997997974602
-Unigram: i
-FRENCH:  P(i) = 0.07195420574256248 ==> log prob of sentence so far: 0.00010530684200736819
-ENGLISH: P(i) = 0.06841707334551206 ==> log prob of sentence so far: 3.564884740686069e-05
-SPANISH: P(i) = 0.06350610791663634 ==> log prob of sentence so far: 9.079419105208351e-05
-Unigram: a
-FRENCH:  P(a) = 0.08239664549553763 ==> log prob of sentence so far: 3.5615748889231515e-05
-ENGLISH: P(a) = 0.0814519135801828 ==> log prob of sentence so far: 1.1996537990127455e-05
-SPANISH: P(a) = 0.13557588495038456 ==> log prob of sentence so far: 3.8121474414183315e-05
-
 According to the unigram model, the sentence is in Spanish
+
+J’aime l’IA.
+Bigram: a|i
+FRENCH:  P(a|i) = 0.0012165605276060754 ==> log prob of sentence so far: 0.05421127975017776
+ENGLISH: P(a|i) = 0.0012104299492876067 ==> log prob of sentence so far: 0.05409246730988683
+SPANISH: P(a|i) = 0.011475089162238883 ==> log prob of sentence so far: 0.14366890016441017
+Bigram: i|m
+FRENCH:  P(i|m) = 0.0026789838991721437 ==> log prob of sentence so far: 0.004140676183090237
+ENGLISH: P(i|m) = 0.002065156545824458 ==> log prob of sentence so far: 0.003690079187935451
+SPANISH: P(i|m) = 0.003988797098284688 ==> log prob of sentence so far: 0.013044326560640201
+Bigram: m|e
+FRENCH:  P(m|e) = 0.009866397988884449 ==> log prob of sentence so far: 0.0005571157414574264
+ENGLISH: P(m|e) = 0.0045109416428406 ==> log prob of sentence so far: 0.00035342468437344954
+SPANISH: P(m|e) = 0.004507393793822937 ==> log prob of sentence so far: 0.001248919522237901
+Bigram: i|A
+FRENCH:  P(i|A) = 0.01655783515994547 ==> log prob of sentence so far: 9.38573960810627e-05
+ENGLISH: P(i|A) = 0.0036333669477328972 ==> log prob of sentence so far: 3.0814324617756775e-05
+SPANISH: P(i|A) = 0.0012987662857558775 ==> log prob of sentence so far: 6.96557380354366e-05
+
+According to the bigram model, the sentence is in French
