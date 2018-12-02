@@ -4,19 +4,7 @@
     <list default="true" id="868c2637-a396-400c-978c-9a70c307c9b0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NLP.py" beforeDir="false" afterPath="$PROJECT_DIR$/NLP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/EN-model.p" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ES-model.p" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/FR-model.p" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/out1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/out10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/out2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/out3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/out4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/out5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/out6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/out7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/out8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/out9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/out9.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sentences.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sentences.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,22 +19,22 @@
     <session id="1374127534">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.3" value="3" />
-          <entry key="project.open.time.4" value="2" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.4" value="3" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3102" />
+          <entry key="py" value="3180" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3102" />
+          <entry key="Python" value="3180" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -66,13 +54,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NLP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="207" column="46" lean-forward="true" selection-start-line="207" selection-start-column="46" selection-end-line="207" selection-end-column="46" />
+            <state relative-caret-position="346">
+              <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1543679505459" expanded="true" signature="10297:10649" ph="..." />
-                <marker date="1543679505459" expanded="true" signature="10783:10786" ph="..." />
-                <marker date="1543679505459" expanded="true" signature="10941:10944" ph="..." />
+                <marker date="1543767109976" expanded="true" signature="10877:11229" ph="..." />
+                <marker date="1543767109976" expanded="true" signature="11363:11366" ph="..." />
+                <marker date="1543767109976" expanded="true" signature="11521:11524" ph="..." />
               </folding>
             </state>
           </provider>
@@ -111,7 +99,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -128,6 +115,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -190,7 +178,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29237288" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.060381357" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34216103" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -224,9 +212,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/fr-vingt-mille-lieues-sous-les-mers.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -236,16 +221,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NLP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="207" column="46" lean-forward="true" selection-start-line="207" selection-start-column="46" selection-end-line="207" selection-end-column="46" />
+        <state relative-caret-position="346">
+          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1543679505459" expanded="true" signature="10297:10649" ph="..." />
-            <marker date="1543679505459" expanded="true" signature="10783:10786" ph="..." />
-            <marker date="1543679505459" expanded="true" signature="10941:10944" ph="..." />
+            <marker date="1543767109976" expanded="true" signature="10877:11229" ph="..." />
+            <marker date="1543767109976" expanded="true" signature="11363:11366" ph="..." />
+            <marker date="1543767109976" expanded="true" signature="11521:11524" ph="..." />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/fr-vingt-mille-lieues-sous-les-mers.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

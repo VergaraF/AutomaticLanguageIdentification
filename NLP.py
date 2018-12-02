@@ -72,10 +72,13 @@ def unigram_sentence(sentence):
     #TODO: Return language accordning to probabilities
     if unigram_probability_so_far_en > unigram_probability_so_far_fr and unigram_probability_so_far_en > unigram_probability_so_far_es:
         output += "\nAccording to the unigram model, the sentence is in English\n"
+        print("\n" + sentence + "\nAccording to the bigram model, the sentence is in English\n")
     elif unigram_probability_so_far_fr > unigram_probability_so_far_en and unigram_probability_so_far_fr > unigram_probability_so_far_es:
         output += "\nAccording to the unigram model, the sentence is in French\n"
+        print("\n" + sentence + "\nAccording to the bigram model, the sentence is in French\n")
     elif unigram_probability_so_far_es > unigram_probability_so_far_en and unigram_probability_so_far_es > unigram_probability_so_far_fr:
         output += "\nAccording to the unigram model, the sentence is in Spanish\n"
+        print("\n" + sentence + "\nAccording to the bigram model, the sentence is in Spanish\n")
     else:
         output += "\nCan't tell"
 
@@ -115,10 +118,13 @@ def bigram_sentence(sentence):
     # TODO: Return language accordning to probabilities
     if bigram_probability_so_far_en > bigram_probability_so_far_fr and bigram_probability_so_far_en > bigram_probability_so_far_es:
         output += "\nAccording to the bigram model, the sentence is in English\n"
+        print("\n" + sentence + "\nAccording to the bigram model, the sentence is in English\n")
     elif bigram_probability_so_far_fr > bigram_probability_so_far_en and bigram_probability_so_far_fr > bigram_probability_so_far_es:
         output += "\nAccording to the bigram model, the sentence is in French\n"
+        print("\n" + sentence + "\nAccording to the bigram model, the sentence is in French\n")
     elif bigram_probability_so_far_es > bigram_probability_so_far_en and bigram_probability_so_far_es > bigram_probability_so_far_fr:
         output += "\nAccording to the bigram model, the sentence is in Spanish\n"
+        print("\n" + sentence + "\nAccording to the bigram model, the sentence is in Spanish\n")
     else:
         output += "\nCan't tell"
 
